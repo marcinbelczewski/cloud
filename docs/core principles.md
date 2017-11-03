@@ -169,11 +169,6 @@ It’s not enough to decompose monolithic applications into microservices. Data 
 We couple bounded contexts with the database per service pattern, where each microservice encapsulates, governs, and protects its own domain model and persistent store.
 
 
-# Useful links
-
-- [Cloud Native Computing Foundation](https://www.cncf.io/)
-
-
 # Evolving Cloud, vendor lock-in
 The cloud evolves. It is enough to blink and miss an innovation. Different "powers" challenge themselves around the cloud evolution and this is the game we should track. 
 
@@ -181,6 +176,8 @@ The cloud evolves. It is enough to blink and miss an innovation. Different "powe
 
 
 ### Be aware of political turmoil around the cloud and containers orchestration:
+
+[Cloud Native Computing Foundation](https://www.cncf.io/) Initialy an initiative to effectively fight the domination of AWS. Recently AWS joined but mostly because to prevent loosing control. Smart people are involved and it is a good idea to track whatever happens there.
 
 [Anyone but Amazon. The rise of Kubernetes](https://blogs.dxc.technology/2017/06/29/anyone-but-amazon-the-rise-of-kubernetes/)
 [Amazon and Kubernetes threat](https://www.techrepublic.com/article/why-kubernetes-platform-prowess-is-a-bigger-threat-to-amazon-than-its-containers/)
