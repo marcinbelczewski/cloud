@@ -156,10 +156,11 @@ Cloud migration enables also organizational migration from centralized governanc
 
 Enterprises normally adopt centralized governance structures around application architecture and data management, with committees responsible for maintaining guidelines and standards, as well as approving individual designs and changes. Adoption of cloud-native application architectures is almost always coupled with a move to decentralized governance. The teams building cloud-native applications ("Business Capability Teams") own all facets of the capability they’re charged with delivering. They own and govern the data, the technology stack, the application architecture, the design of individual components, and the API contract delivered to the remainder of the organization. If a decision needs to be made, it’s made and executed upon autonomously by the team. 
 
-**Inverse Conway Maneuver** - rather than build an architecture that matches company's organizational chart, the company can determine the architecture they want, and restructure their organization to match that architecture. Once done, according to Conway, the architecture desired will eventually emerge.
+## Inverse Conway Maneuver
+Rather than build an architecture that matches company's organizational chart, the company can determine the architecture they want, and restructure their organization to match that architecture. Once done, according to Conway, the architecture desired will eventually emerge.
 What remains then is to determine what teams to create. If we follow the Inverse Conway Maneuver, we’ll start with the domain model for the organization, and seek to identify business capabilities that can be encapsulated within bounded contexts. Once we identify these capabilities, we create business capability teams to own them throughout their useful lifecycle. Business capability teams own the entire development-to-operations lifecycle for their applications.
 
-### Decomposing monoliths
+## Decomposing monoliths
 Traditional n-tier, monolithic enterprise applications rarely operate well when deployed to cloud infrastructure, as they often make unsupportable assumptions about their deployment environment that cloud infrastructures simply cannot provide. A few examples include: Access to mounted, shared filesystems Peer-to-peer application server clustering,shared libraries Configuration files sitting in well-known locations. Monoliths couple change cycles together such that independent business capabilities cannot be deployed as required, preventing speed of innovation. Services embedded in monoliths cannot be scaled independently of other services, so load is far more difficult to account for efficiently. 
 Developers new to the organization must acclimate to a new team, often learn a new business domain, and become familiar with an extremely large codebase all at once. This only adds to the typical 3– 6 month ramp up time before achieving real productivity. 
 Attempting to scale the development organization by adding more people further crowds the sandbox, adding expensive coordination and communication overhead. 
@@ -167,13 +168,21 @@ Technical stacks are committed to for the long term. Introducing new technology 
 It’s not enough to decompose monolithic applications into microservices. Data models must also be decoupled. If business capability teams are supposedly autonomous but are forced to collaborate via a single data store, the monolithic barrier to innovation is simply relocated.
 We couple bounded contexts with the database per service pattern, where each microservice encapsulates, governs, and protects its own domain model and persistent store.
 
- 
+
 # Useful links
 
 - [Cloud Native Computing Foundation](https://www.cncf.io/)
 
 
-# Be aware of political turmoil around the cloud
-- "Anyone but AWS" club
+# Evolving Cloud, vendor lock-in
+The cloud evolves. It is enough to blink and miss an innovation. Different "powers" challenge themselves around the cloud evolution and this is the game we should track. 
+
+### Microservices vs serverless
+
+
+### Be aware of political turmoil around the cloud and containers orchestration:
+
+[Anyone but Amazon. The rise of Kubernetes](https://blogs.dxc.technology/2017/06/29/anyone-but-amazon-the-rise-of-kubernetes/)
+[Amazon and Kubernetes threat](https://www.techrepublic.com/article/why-kubernetes-platform-prowess-is-a-bigger-threat-to-amazon-than-its-containers/)
 - AWS threatened by Kubernetes
 - Open Container Initiative (against Docker monopoly)
